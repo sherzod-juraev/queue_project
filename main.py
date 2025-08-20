@@ -1,46 +1,36 @@
 from my_queue import Queue, QueueIsEmpty
 
-def main():
-    q = Queue()
-    
-    # 1. Enqueue qilish
-    print("Enqueue qilish:")
-    for i in range(5):
-        q.enqueue(i)
-        print(q)
-    
-    # 2. Dequeue qilish
-    print("\nDequeue qilish:")
-    try:
-        while True:
-            val = q.dequeue()
-            print(f"Dequeued: {val}, Queue: {q}")
-    except QueueIsEmpty as e:
-        print(e)
-    
-    # 3. Peek
-    q.enqueue(100)
-    q.enqueue(200)
-    print("\nPeek:", q.peek())
-    
-    # 4. Index orqali olish va o‘zgartirish
-    print("\nIndex bilan ishlash:")
-    print("Queue:", q)
-    print("q[0] =", q[0])
-    q[0] = 111
-    print("Yangilangan Queue:", q)
-    
-    # 5. Iteratsiya
-    print("\nIteratsiya qilish:")
-    for item in q:
-        print(item)
-    
-    # 6. List ko‘rinishi
-    print("\nList view:", q.to_list())
-    
-    # 7. Clear
-    q.clear()
-    print("\nClear qilingan Queue:", q)
+# Initialize queue
+q = Queue()
 
-if __name__ == "__main__":
-    main()
+# Enqueue elements
+for i in range(5):
+    q.enqueue(i)
+print("Queue:", q)  # Output: 0->1->2->3->4
+
+# Dequeue elements
+try:
+    while True:
+        value = q.dequeue()
+        print(f"Dequeued: {value}, Queue: {q}")
+except QueueIsEmpty:
+    print("Queue is empty now.")
+
+# Peek
+q.enqueue(100)
+print("Peek:", q.peek())  # Output: 100
+
+# Indexing
+q[0] = 111
+print("Updated Queue:", q)
+
+# Iteration
+for item in q:
+    print(item)
+
+# Convert to list
+print("List view:", q.to_list())
+
+# Clear queue
+q.clear()
+print("Cleared Queue:", q)
