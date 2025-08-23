@@ -8,10 +8,14 @@ It supports operations like `enqueue`, `dequeue`, `peek`, `clear`, `to_list`, an
 ## Project Structure
 
 queue_project/
+
 |
-├── my_queue.py # Queue and QueueIsEmpty classes
-├── main.py # Example usage
-├── README.md # Project description
+
+├── my_queue.py
+
+├── main.py
+
+├── README.md
 
 
 ---
