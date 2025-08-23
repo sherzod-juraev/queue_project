@@ -72,7 +72,7 @@ print("List view:", q.to_list())
 q.clear()
 print("Cleared Queue:", q)
 ```
-Notes
+## Notes
 
 The queue raises a QueueIsEmpty exception when trying to dequeue or peek from an empty queue.
 
